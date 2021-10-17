@@ -1,7 +1,7 @@
 {
-    "name": "Song-Bot",
-    "description": "A Modular telegram song bot.",
-    "repository": "https://github.com/shamilhabeebnelli/Song-Bot",
+    "name": "UpvoteBot",
+    "description": "Телеграмм бот для скачивания MP3 из YouTube",
+    "repository": "https://github.com/phatjunior/song-bot/tree/Without-CMD",
     "keywords": [
        
         "telegram bot",
@@ -23,7 +23,7 @@
         },
         "START_MSG": {
             "description": "Start Message of BoT",
-            "value": "<b>Hi {},\nIam A Simple Youtube to Mp3 Downloader Bot,</b>\n\nSend me Any Songs name, I can help you with uploading that to TG"
+            "value": "<b> Привет{},\n Я помогу тебе скачать MP3 из YouTube,</b>\n Тебе нужно всего лишь прислать мне ссылку на ролик.."
         },
         "START_IMG": {
             "description": "Start Message's Photo.",
