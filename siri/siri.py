@@ -12,26 +12,28 @@ from config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-BUTTON1="📜 Source Code 📜"
-B2="telegram.dog/shamilhabeeb"
-OWNER="Owner"
-GITCLONE="github.com/shamilhabeebnelli/song-bot"
-ABS="Developer"
-APPER="shamilhabeeb"
+ # BUTTON1="📜 Source Code 📜"
+ # B2="telegram.dog/shamilhabeeb"
+ # OWNER="Owner"
+ # GITCLONE="github.com/shamilhabeebnelli/song-bot"
+ # ABS="Developer"
+ # APPER="shamilhabeeb"
 
 @Client.on_message(filters.command('start') & filters.private)
 async def start(client, message):
     await message.reply_photo(photo=Config.START_IMG, caption=Config.START_MSG.format(message.from_user.mention),
-         reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(BUTTON1, url=GITCLONE)
-                 ],[
-                    InlineKeyboardButton(OWNER, url=f"https://telegram.dog/{Config.OWNER}"),
-                    InlineKeyboardButton(ABS, url=B2)
-            ]
-          ]
-        ),
+                              
+          reply_markup=InlineKeyboardMarkup(
+ #            [
+ #               [
+ #                   InlineKeyboardButton(BUTTON1, url=GITCLONE)
+ #                 ],[
+ #                    InlineKeyboardButton(OWNER, url=f"https://telegram.dog/{Config.OWNER}"),
+ #                    InlineKeyboardButton(ABS, url=B2)
+ #            ]
+ #          ]
+ #        ),
+                              
         reply_to_message_id=message.message_id
     )
 
@@ -76,15 +78,15 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('**👎 Nothing to found 🥺 Try with another!**')
+            m.edit('**👎 Ничего не нашел 🥺 Попробуй ещё раз**')
             return
     except Exception as e:
         m.edit(
-            "**found nothing, please try again**"
+            "** Ничего не нашел, попробуй ещё раз**"
         )
         print(str(e))
         return
-    m.edit("**m.youtube.com responded, uploading...**")
+    m.edit("**m.youtube.com ответил, загружаю...**")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -98,7 +100,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('**An Internal error occured; Report This @redbullfed!!**')
+        m.edit('**Возникла ошибка..**')
         print(e)
     try:
         os.remove(audio_file)
