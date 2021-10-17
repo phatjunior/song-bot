@@ -1,16 +1,13 @@
 ### song-bot
 ```
-You can download youtube to MP3 from telegram bot #musics
-with & without commands
+Ты сможешь скачать MP3 из YouTube
 ```
 
-## Deploy - Simplest Way
-##### Deploy - with /song command
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shamilhabeebnelli/song-bot/tree/main)
+##### Deploy - через /song команду
 
-##### Deploy - Without Command
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shamilhabeebnelli/song-bot/tree/Without-CMD)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/phatjunior/song-bot/tree/main)
 
-## Deploy Hard Way
-No Any Hard Ways Deploy simple way 🤗🤣
+##### Deploy - без команды
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/phatjunior/song-bot/tree/Without-CMD)
+
