@@ -62,7 +62,7 @@ def a(client, message):
             link = f"https://youtube.com{results[0]['url_suffix']}"
             # print(results)
             title = results[0]["title"]
-            artist = results[0]["artist"]
+            # artist = results[0]["artist"]
             thumbnail = results[0]["thumbnails"][0]
             duration = results[0]["duration"]
             views = results[0]["views"]
@@ -93,12 +93,12 @@ def a(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎬 <a href="{link}">{title},{artist}</a>'
+        rep = f'🎬 <a href="{link}">{title}</a>'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
             secmul *= 60
-        message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=artist, thumb=thumb_name)
+        message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
         m.edit('**Возникла ошибка..**')
