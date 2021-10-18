@@ -20,11 +20,11 @@
        
         "START_MSG": {
             "description": "Start Message of BoT",
-            "value": "<b> Привет{},\n Я помогу тебе скачать MP3 из YouTube,</b>\n Тебе нужно всего лишь прислать мне ссылку на ролик.."
+            "value": "<b> Привет {},\n Я помогу тебе скачать MP3 из YouTube,</b>\n Просто пришли мне ссылку на ролик.."
         },
         "START_IMG": {
             "description": "Start Message's Photo.",
-            "value": "https://telegra.ph/file/2a35fca576aa49de77c98.jpg"
+            "value": "https://telegra.ph/file/d293032746d64f1f85c1a.jpg"
         },
         "BOT_TOKEN": {
             "description": "ID of the message to edit.",
