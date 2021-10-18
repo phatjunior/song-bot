@@ -23,7 +23,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 async def start(client, message):
     await message.reply_photo(photo=Config.START_IMG, caption=Config.START_MSG.format(message.from_user.mention),
                               
-          reply_markup=InlineKeyboardMarkup(
+ #          reply_markup=InlineKeyboardMarkup(
  #            [
  #               [
  #                   InlineKeyboardButton(BUTTON1, url=GITCLONE)
