@@ -79,7 +79,7 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('**Похоже у нас проблемы, о которых должен знать <a href="{https://t.me/phatBeats}">{разработчик}</a>. **')
+            m.edit('**Похоже у нас проблемы, о которых должен знать разработчик. **')
             return
     except Exception as e:
         m.edit(
