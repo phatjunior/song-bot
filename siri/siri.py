@@ -79,15 +79,15 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('**Ничего не могу найти по данному запросу.. Попробуй ещё раз чуть позже**')
+            m.edit('**Похоже у нас проблемы, о которых должен знать <a href="{https://t.me/phatBeats}">{разработчик}</a>. **')
             return
     except Exception as e:
         m.edit(
-            "** Ничего не могу найти по данному запросу.. давай попробуем ещё раз чуть позже**"
+            "**Ничего не могу найти по данному запросу.. Возможно неправильная ссылка**"
         )
         print(str(e))
         return
-    m.edit("**✅ Есть! Загрузка пошла.. Ожидай, скоро отправлю тебе.. **")
+    m.edit("**✅ Ссылка получена. Я пришлю аудиофайл, как только он будет готов...  **")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -101,7 +101,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('**Блин! Что-то пошло не так. Давай попробуем ещё раз, отправь мне ссылку повторно..**')
+        m.edit('**Произошла ошибка. Иногда такое случается. Думаю со следующей попытки у меня всё получится, отправь мне ссылку ещё раз...**')
         print(e)
     try:
         os.remove(audio_file)
